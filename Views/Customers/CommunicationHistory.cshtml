@@ -1,0 +1,26 @@
+﻿@model List<CommunicationHistory>
+
+<h2>Communication History</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>CommunicationDate</th>
+            <th>CommunicationType</th>
+            <th>CommunicationDetails</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var communication in Model)
+        {
+            <tr>
+                <td>@communication.CommunicationDate.ToString("dd-MM-yyyy")</td>
+                <td>@communication.CommunicationType</td>
+                <td>@communication.CommunicationDetails</td>
+            </tr>
+        }
+    </tbody>
+</table>
+<div style="margin-top: 20px;">
+    <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+</div>

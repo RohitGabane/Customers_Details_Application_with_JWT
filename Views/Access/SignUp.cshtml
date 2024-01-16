@@ -1,0 +1,96 @@
+﻿@model UI.Models.Users
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Sign Up</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            text-align: center;
+        }
+
+        form {
+            max-width: 300px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0;
+        }
+
+        .error-message {
+            color: red;
+            font-size: 14px;
+        }
+    </style>
+</head>
+@*<body>
+    <form asp-controller="Access" asp-action="SignUp" method="post">
+        <h1>Sign Up</h1>
+        <input type="email" placeholder="Email" asp-for="Email" required />
+        <input type="password" placeholder="Password" asp-for="Password" required />
+        <label>
+            <input type="checkbox" asp-for="KeepLoggedIn" />
+            Keep me Logged In
+        </label>
+        <button type="submit" class="btn btn-success">Sign Up</button>
+
+        @if (ViewData["ValidateMessage"] != null)
+        {
+            <p class="error-message">@ViewData["ValidateMessage"]</p>
+        }
+    </form>
+</body>*@
+<body>
+    <form asp-controller="Access" asp-action="SignUp" method="post">
+        <h1>Sign Up</h1>
+        <input type="email" placeholder="Email" asp-for="Email" required />
+        <input type="password" placeholder="Password" asp-for="Password" required />
+        <label>
+            <input type="checkbox" asp-for="KeepLoggedIn" />
+            Keep me Logged In
+        </label>
+        <button type="submit" class="btn btn-success">Sign Up</button>
+
+        @if (ViewData["ValidateMessage"] != null)
+        {
+            <p class="error-message">@ViewData["ValidateMessage"]</p>
+        }
+
+        <p>Already have an account? <a href="/Access/Login">Login</a></p>
+    </form>
+</body>
+</html>
+
